@@ -27,8 +27,10 @@ function dce_basic_theme_settings_page()
 {
     ?>
 	    <div class="wrap">
-	    <h1>DCE Basic Theme Panel</h1>
-
+	       <h1>DCE Basic Theme Panel</h1>
+            <p>
+            The Divi Child Enhanced Basic Theme adds customized options to your Wordpress Divi theme installation.
+            </p>
 		</div>
 	<?php
 }
