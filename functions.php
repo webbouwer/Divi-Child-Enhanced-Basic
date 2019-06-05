@@ -35,8 +35,8 @@ function dce_basic_theme_settings_page()
 	    <form method="post" action="">
 	        <?php
 	            settings_fields("section");
-	            do_settings_sections("theme-options");
-	            submit_button();
+	            //do_settings_sections("theme-options");
+	            //submit_button();
 	        ?>
 	    </form>
 		</div>
@@ -44,21 +44,25 @@ function dce_basic_theme_settings_page()
 }
 
 
-// >> https://www.sitepoint.com/create-a-wordpress-theme-settings-page-with-the-settings-api/
-// >> https://wpreset.com/programmatically-automatically-download-install-activate-wordpress-plugins/
 
 
 
 function  install_plugins_text() {
 
-	echo '<p>The Divi Child Enhanced Basic theme comes with a list of recommended plugins.</p>';
+	echo '<p>The Divi Child Enhanced Basic theme is used to enable customized tweaks for individual Wordpress Packages.</p>';
 	//echo '<p>Check separate plugins or install all</p>';
 
 
 }
+
+/* Extend with plugins
+
+
+// >> https://www.sitepoint.com/create-a-wordpress-theme-settings-page-with-the-settings-api/
+// >> https://wpreset.com/programmatically-automatically-download-install-activate-wordpress-plugins/
+
 function install_plugins_element()
 {
-
 
     if( isset( $_POST['install_plugins'] ) ){
             update_option('install_plugins', '1' );
@@ -76,7 +80,7 @@ function display_theme_panel_fields()
 {
 	add_settings_section("section", "Install plugins", 'install_plugins_text', "theme-options");
 
-//	/add_settings_section('main_section', 'Main Settings', 'section_text_intro', __FILE__);
+    //add_settings_section('main_section', 'Main Settings', 'section_text_intro', __FILE__);
 
     add_settings_field("install_plugins", "(Re)Install all above listed plugins", "install_plugins_element", "theme-options", "section");
 
@@ -85,5 +89,6 @@ function display_theme_panel_fields()
 
 add_action("admin_init", "display_theme_panel_fields");
 
+*/
 
 
