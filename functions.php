@@ -35,7 +35,7 @@ function dce_basic_theme_settings_page()
 	    <form method="post" action="">
 	        <?php
 	            settings_fields("section");
-	            //do_settings_sections("theme-options");
+	            do_settings_sections("theme-options-intro");
 	            //submit_button();
 	        ?>
 	    </form>
@@ -47,13 +47,14 @@ function dce_basic_theme_settings_page()
 
 
 
-function  install_plugins_text() {
+function  dceb_plugins_text() {
 
 	echo '<p>The Divi Child Enhanced Basic theme is used to enable customized tweaks for individual Wordpress Packages.</p>';
 	//echo '<p>Check separate plugins or install all</p>';
 
 
 }
+add_settings_section("section", "Divi Child Enhanced Basic", 'dceb_plugins_text', "theme-options-intro");
 
 /* Extend with plugins
 
@@ -78,7 +79,7 @@ function install_plugins_element()
 
 function display_theme_panel_fields()
 {
-	add_settings_section("section", "Install plugins", 'install_plugins_text', "theme-options");
+
 
     //add_settings_section('main_section', 'Main Settings', 'section_text_intro', __FILE__);
 
